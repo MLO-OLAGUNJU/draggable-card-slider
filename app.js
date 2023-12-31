@@ -1,4 +1,5 @@
 const carousel = document.querySelector(".carousel");
+const arrowBtns = document.querySelector(".wrapper svg");
 
 let isDragging = false,
   startX,
