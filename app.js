@@ -4,7 +4,7 @@ let isDragging = false,
   startX,
   startScrollLeft;
 
-const dragStart = () => {
+const dragStart = (e) => {
   isDragging = true;
   carousel.classList.add("dragging");
   startX = e.pageX;
@@ -13,6 +13,8 @@ const dragStart = () => {
 
 const dragging = (e) => {
   if (!isDragging) return; //if is dragging is false return from here
+
+  //Updates the scroll posoition of the carousel based on the cursor movement
   carousel.scrollLeft = startScrollLeft - (e.pageX - startX);
 };
 
