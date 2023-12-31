@@ -52,10 +52,26 @@ body {
   grid-auto-flow: column;
   grid-auto-columns: calc((100% / 3) - 12px);
   gap: 16px;
-  overflow: hidden;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  scrollbar-width: 0;
+}
+
+.carousel::-webkit-scrollbar {
+  display: none;
+}
+.no-transition {
+  scroll-behavior: auto;
+}
+
+.dragging {
+  scroll-snap-type: none;
+  scroll-behavior: auto;
 }
 
 .card {
+  scroll-snap-align: start;
   cursor: grab;
   user-select: none;
   list-style: none;
