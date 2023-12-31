@@ -4,6 +4,7 @@ let isDragging = false;
 
 const dragStart = () => {
   isDragging = true;
+  carousel.classList.add("dragging");
 };
 
 const dragging = (e) => {
