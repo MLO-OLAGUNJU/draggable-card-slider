@@ -13,7 +13,7 @@ const dragStart = () => {
 
 const dragging = (e) => {
   if (!isDragging) return; //if is dragging is false return from here
-  carousel.scrollLeft = e.pageX;
+  carousel.scrollLeft = startScrollLeft - (e.pageX - startX);
 };
 
 const dragStop = () => {
