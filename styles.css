@@ -56,6 +56,8 @@ body {
 }
 
 .card {
+  cursor: grab;
+  user-select: none;
   list-style: none;
   background: #fff;
   border-radius: 8px;
